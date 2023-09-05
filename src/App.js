@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import react from 'react';
 import './App.css';
+// import Calc2 from './comp/Calc2';
+import TodolistOffline from './comp/TodolistOffline';
 
 function App() {
+  const age = 6
+  if (age >= 18) {
+    console.log('voting');
+
+  } else {
+    console.log('non voting');
+
+  }
+  let x = 22
+  const y = 22
+  const z = x + y
+
+  const a = 66
+  const b = 22
+  const c = a - b
+
+  x = 3
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <TodolistOffline />
+
+
     </div>
   );
 }
