@@ -1,0 +1,16 @@
+img{
+    padding-left: 400px;
+    padding-top: 100px;
+}
+p{
+    background-color: aquamarine;
+    text-align: center;
+}
+#head{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 30px;
+}

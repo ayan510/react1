@@ -1,0 +1,213 @@
+body,
+h1,
+h2,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, hwb(180 83% 6%), #0c2109);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  border: solid black 05px;
+  border-radius: 4px;
+  box-shadow: gray 10px 10px 10px;
+}
+
+/* Menu Section */
+.menu {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.menu h2 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.menu li:last-child {
+  margin-bottom: 0;
+}
+
+.menu li .item-name {
+  font-size: 1.1em;
+}
+
+#maintitle {
+  border: solid black 05px;
+  border-radius: 4px;
+  box-shadow: gray 10px 10px 10px;
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+#orderbtn {
+  background-color: yellow;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#orderbtn:hover{
+  font-size: 15px;
+  box-shadow: #363636 10px 10px 10px;
+}
+
+.menu li .item-price {
+  font-weight: bold;
+}
+
+.menu li .add-to-order-button {
+  background-color: #FF6B6B;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px; /* Increased padding */
+  margin-left: auto; /* Push the button to the right */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu li .add-to-order-button:hover {
+  background-color: #E84141;
+}
+
+/* Order Section */
+.order {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.order h2 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.order ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.order li:last-child {
+  margin-bottom: 0;
+}
+
+.order li .item-name {
+  font-size: 1.1em;
+}
+
+.order li .item-price {
+  font-weight: bold;
+}
+
+.order li .order-now-button {
+  background-color: #6C5CE7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px; /* Increased padding */
+  margin-top: 10px; /* Added margin */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order li .order-now-button:hover {
+  background-color: #483D8B;
+}
+
+.order p {
+  text-align: right;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.add{
+  /* float: right; */
+  margin-left: 40px;
+  margin-bottom: 10px;
+  background-color: greenyellow;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+#remove{
+   margin-left: 40px;
+  margin-bottom: 10px;
+  background-color: #ff0000;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+#remove:hover{
+  font-size: 15px;
+  box-shadow: #363636 10px 10px 10px;
+}
+.add:hover{
+  font-size: 15px;
+  box-shadow: #363636 10px 10px 10px;
+}
+.watermark {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(138, 138, 138, 0.3); /* Adjust color and opacity */
+  font-size: 12px;
+}
+#haysky{
+   font-family: 'Lucida Handwriting', cursive;
+}
