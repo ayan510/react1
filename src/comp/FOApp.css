@@ -205,9 +205,17 @@ h1 {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: rgba(138, 138, 138, 0.3); /* Adjust color and opacity */
+  color: rgba(138, 138, 138, 0.3);
   font-size: 12px;
 }
 #haysky{
    font-family: 'Lucida Handwriting', cursive;
+}
+.logo {
+   position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+  border-radius: 50px;
 }

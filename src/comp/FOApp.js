@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FOApp.css';
-
+import logo from './logo.png'
 function FoodOrderApp() {
     const [items, setItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -43,6 +43,7 @@ function FoodOrderApp() {
     return (
         <div className="legend-container">
             <legend id='haysky'>HAYSKY'S CUISINE</legend>
+            <img src={logo} alt="Logo" className="logo" />
             <div>
                 <h1 id='maintitle'>
                     <span style={{ color: "red" }}>F</span>ood{" "}
