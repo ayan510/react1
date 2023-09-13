@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './FOApp.css';
 import logo from './logo.png'
+
 function FoodOrderApp() {
     const [items, setItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -10,8 +11,20 @@ function FoodOrderApp() {
         { id: 2, name: 'Pizza', price: 199.99 },
         { id: 1, name: 'Burger', price: 99.99 },
         { id: 3, name: 'Friess.', price: 89.99 },
-        // Add more menu items here
+
     ];
+
+    useEffect(() => {
+        const storedOrderedItems = JSON.parse(localStorage.getItem('orderedItems')) || [];
+        const storedItems = JSON.parse(localStorage.getItem('items')) || [];
+        setOrderedItems(storedOrderedItems);
+        setItems(storedItems);
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('orderedItems', JSON.stringify(orderedItems));
+        localStorage.setItem('items', JSON.stringify(items));
+    }, [orderedItems, items]);
 
     const addToOrder = (item) => {
         const updatedItems = [...items, item];
@@ -27,12 +40,18 @@ function FoodOrderApp() {
         setTotalPrice(updatedTotalPrice);
     };
 
+    const clearOrder = () => {
+        localStorage.removeItem('orderedItems');
+        localStorage.removeItem('items');
+        setOrderedItems([]);
+        setItems([]);
+        setTotalPrice(0);
+    };
+
     function confirm() {
         if (items.length) {
-            // Copy the selected items to the orderedItems state
             setOrderedItems([...items]);
             alert('ORDER PLACED');
-            // Clear items and total price
             setItems([]);
             setTotalPrice(0);
         } else {
@@ -81,7 +100,11 @@ function FoodOrderApp() {
                     <button id='orderbtn' onClick={confirm}>
                         ORDER NOW
                     </button>
-                    {/* <h1>{msg}</h1> */}
+                    {items.length > 1 && (
+                        <button id='remove2' onClick={clearOrder}>
+                            CLEAR ALL
+                        </button>
+                    )}
                 </div>
                 <hr></hr>
 
@@ -99,8 +122,6 @@ function FoodOrderApp() {
                         <p>You don't have any orders yet.</p>
                     )}
                 </div>
-
-                {/* Watermark */}
                 <div className="watermark">AYAN510</div>
             </div>
         </div>
